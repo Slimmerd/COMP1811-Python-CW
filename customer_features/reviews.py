@@ -2,7 +2,7 @@ import sqlite3
 
 
 # connecting to database
-conn = sqlite3.connect('review.db')
+conn = sqlite3.connect('database/review.db')
 # creating a cursor
 c = conn.cursor()
 

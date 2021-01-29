@@ -1,10 +1,10 @@
 import tkinter as tk
 
 from api.database_management import DatabaseAPI
-from tools.saving_tool import SaveFile
 from components.toy_products.sub_components.class_add_product import AddProductWindow
 from components.toy_products.sub_components.class_delete_product import DeleteProductWindow
 from components.toy_products.sub_components.class_edit_product import EditProductWindow
+from tools.saving_tool import SaveFile
 
 
 class StockTakingPage(tk.Frame):

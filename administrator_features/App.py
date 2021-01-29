@@ -1,12 +1,13 @@
 import tkinter as tk
 import tkinter.font as font
+
 from components.login.class_login_frame import AuthPage
 from components.menu.class_menu_frame import MenuPage
 from components.stock_management.class_low_stock_items import LowStockPage
 from components.stock_management.class_stock_taking import StockTakingPage
-from tools.low_stock_notifier_tool import LowStockNotifier
 from components.toy_categories.class_category_list import CategoryListPage
 from components.toy_products.class_product_list import ProductListPage
+from tools.low_stock_notifier_tool import LowStockNotifier
 
 
 class App(tk.Tk):

@@ -1,14 +1,16 @@
 import unittest
-from App import App
+
 from api.database_management import DatabaseAPI
-from components.stock_management.sub_components.class_show_info_window import ShowInfoWindow
-from components.toy_categories.sub_components.class_add_category import AddCategoryWindow
-from components.toy_categories.sub_components.class_delete_category import DeleteCategoryWindow
-from components.toy_categories.sub_components.class_edit_category import EditCategoryWindow
-from components.toy_products.sub_components.class_add_product import AddProductWindow
-from components.toy_products.sub_components.class_delete_product import DeleteProductWindow
-from components.toy_products.sub_components.class_edit_product import EditProductWindow
+from components_start.stock_management.sub_components.class_show_info_window import ShowInfoWindow
+from components_start.toy_categories.sub_components.class_add_category import AddCategoryWindow
+from components_start.toy_categories.sub_components.class_delete_category import DeleteCategoryWindow
+from components_start.toy_categories.sub_components.class_edit_category import EditCategoryWindow
+from components_start.toy_products.sub_components.class_add_product import AddProductWindow
+from components_start.toy_products.sub_components.class_delete_product import DeleteProductWindow
+from components_start.toy_products.sub_components.class_edit_product import EditProductWindow
 from tools.saving_tool import SaveFile
+
+from App import App
 
 
 class ProductFrameTests(unittest.TestCase):

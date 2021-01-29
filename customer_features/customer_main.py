@@ -1,13 +1,13 @@
+import sqlite3
 import tkinter as tk
 import tkinter.font as font
-import sqlite3
 
 root = tk.Tk()
-root.title('AllaboutToys')
+root.title('All about Toys')
 root.config(bg='#ccffff')
 
 width, height = root.winfo_screenwidth(), root.winfo_screenheight()
-root.geometry('%dx%d+0+0' % (width,height))
+root.geometry('%dx%d+0+0' % (width, height))
 
 # different fonts and size available to use
 font1 = font.Font(family='arial', size='30', weight='bold')
@@ -189,7 +189,7 @@ add_review = tk.Frame(root, bg='lightblue')
 # def submit():
 def submit_review():
     # connecting to database
-    conn = sqlite3.connect('review.db')
+    conn = sqlite3.connect('database/review.db')
     # creating a cursor
     c = conn.cursor()
 
@@ -225,13 +225,13 @@ def add_more_reviews():
     comment_lbl.place(relx=0.05, rely=0.46)
     comment.place(relx=0.17, rely=0.3, relheight=0.4, relwidth=0.6)
     submit.place(relx=0.84, rely=0.45, relheight=0.2, relwidth=0.1)
-    
+
 
 # allows user to read reviews on teddy bear
 # this connects to the database I made and displays the data according to the query
 def ted_rev():
     # connecting to database
-    conn = sqlite3.connect('review.db')
+    conn = sqlite3.connect('database/review.db')
     # creating a cursor
     c = conn.cursor()
 
@@ -260,7 +260,7 @@ def ted_rev():
 # allows user to read reviews on guess who product
 def GW_rev():
     # connecting to database
-    conn = sqlite3.connect('review.db')
+    conn = sqlite3.connect('database/review.db')
     # creating a cursor
     c = conn.cursor()
 
@@ -285,6 +285,7 @@ def GW_rev():
     conn.commit()
     # close our connection
     conn.close()
+
 
 # this function will take the user to the main page
 def main_page():
@@ -319,6 +320,7 @@ def search(search_box):
     elif search_box == 'Card games' or 'card games' or 'uno' or 'Uno':
         card_games()
 
+
 # this will only display the action figures when searched or the category is chosen
 listbox1 = tk.Listbox(display_frame)
 
@@ -342,6 +344,7 @@ def action_figures():
 
 listbox2 = tk.Listbox(display_frame)
 
+
 def board_games():
     cat_frame.place_forget()
     frame_3.place_forget()
@@ -358,7 +361,10 @@ def board_games():
 
     listbox2.pack(fill='both', expand=True)
 
+
 listbox3 = tk.Listbox(display_frame)
+
+
 def card_games():
     cat_frame.place_forget()
     frame_3.place_forget()
@@ -400,7 +406,7 @@ header = tk.Frame(root, bg='white')
 header.place(relx=0.5, rely=0.02, relwidth=0.95, relheight=0.1, anchor='n')
 
 lbl_font = font.Font(family='arial', size='32', weight='bold')
-lbl_1 = tk.Label(header, text='AllaboutToys', fg='lightpink', bg='white', font=lbl_font)
+lbl_1 = tk.Label(header, text='All about Toys', fg='lightpink', bg='white', font=lbl_font)
 lbl_1.place(relx=0.5, rely=0.45, anchor='center')
 btn_1 = tk.Button(header, text='exit', bg='white', fg='red', relief='flat', command=quit)
 btn_1.place(relx=0.9, rely=0.35)
