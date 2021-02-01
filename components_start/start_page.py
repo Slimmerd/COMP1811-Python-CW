@@ -32,13 +32,13 @@ class StartPage(tk.Frame):
         self.customer_button.pack(pady=10)
 
         # Sales staff Panel
-        self.customer_label = tk.Label(self, text="Customer panel", font=self.controller.title_font)
+        self.customer_label = tk.Label(self, text="Order processing panel", font=self.controller.title_font)
         self.customer_label.pack(side="top", pady=20)
 
         self.customer_button = tk.Button(self,
                                          text='Open',
-                                         command='')
-        # os.system('python3 ./customer_features/customer_main.py'))
+                                         command=lambda: os.system(
+                                             'python3 ./order_processing_features/order_processing_GUI.py'))
         self.customer_button.pack(pady=10)
 
         # Exit button

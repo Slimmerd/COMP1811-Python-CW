@@ -11,3 +11,9 @@
 > For Administrator Features: App.py
 >
 > For Customer Features: customer_main.py
+
+## Administrator features:
+
+> Login: admin
+>
+> Password: admin123
